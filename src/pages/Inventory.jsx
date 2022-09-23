@@ -1,7 +1,7 @@
 import { Badge, Input, Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
 import React from "react";
 import data from "../details/data.js";
-import "./styles/ShowData.css";
+import "./styles/Inventory.css";
 import { MdKeyboardArrowDown } from 'react-icons/md'
 const Inventory = () => {
   return (
