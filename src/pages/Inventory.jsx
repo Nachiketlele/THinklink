@@ -3,7 +3,7 @@ import React from "react";
 import data from "../details/data.js";
 import "./styles/ShowData.css";
 import { MdKeyboardArrowDown } from 'react-icons/md'
-const ShowData = () => {
+const Inventory = () => {
   return (
     <>
       <div>
@@ -14,7 +14,7 @@ const ShowData = () => {
         <Thead>
           <Tr textAlign={"left"}>
             <Th className="tr"><Input type={"checkbox"}/></Th>
-            <Th className="tr">PRODUCT</Th>
+            <Th className="tr" paddingLeft={"23px"}>PRODUCT</Th>
             <Th className="tr">RATING</Th>
             <Th className="tr">VINTAGE</Th>
             <Th className="tr">QTY</Th>
@@ -26,18 +26,19 @@ const ShowData = () => {
         <Tbody>
 
           {data.map((el) => (
+
+            <>
+            {/* <div style={{display:"block"}}> */}
             <Tr>
               <Td><Input type={"checkbox"}/></Td>
               <Td className="td">
-                <div id="parent">
-                   <div id="imagediv">
-                    <img id="images" src={el.image} alt="" />
-                   </div>
-                   <div id="textdiv">
-                   <p id="mainti">{el.title}</p>
-                   <p id="childti">{el.title1}</p>
-                   </div>
-                </div>
+                <tr>
+                   <td><img style={{width:"48px",height:"48px"}} src={el.image} alt="" /></td>
+                   <td>
+                     <tr><td id="mainti">{el.title}</td></tr>
+                     <tr><td id="childti">{el.title1}</td></tr>
+                   </td>
+                </tr>
               </Td>
               <Td>
                  <Badge fontSize={"14px"} fontWeight={"600"} backgroundColor={"#F4F7FF"} marginLeft={"7px"}>{el.rating}</Badge>
@@ -49,6 +50,8 @@ const ShowData = () => {
               <Td color={"#262730"} fontWeight={"600"} fontSize={"14px"}>${el.price}</Td>
               <Td><MdKeyboardArrowDown/></Td>
             </Tr>
+            {/* </div> */}
+            </>
           ))}
         </Tbody>
       </Table>
@@ -57,4 +60,4 @@ const ShowData = () => {
   );
 };
 
-export default ShowData;
+export default Inventory;

@@ -6,7 +6,7 @@ import {FiTruck} from "react-icons/fi"
 import {AiOutlineFileDone} from "react-icons/ai"
 import {MdOutlineCancel} from "react-icons/md"
 import Chart from './Chart'
-import ShowData from './ShowData'
+import Inventory from './Inventory'
 
 const Home = () => {
     let obj = [
@@ -64,7 +64,7 @@ const Home = () => {
           ))}
        </div>
        <Chart/>
-       <ShowData/>
+       <Inventory/>
     </div>
     </>
   )
